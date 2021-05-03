@@ -4,12 +4,11 @@
 
 int gcd(int x, int y);  // 最大公約数を求める関数
 
-int main()
-{
-	int num1, num2, num_ans, den1, den2, den_ans, fra_gcd;
+int main() {
+    int num1, num2, num_ans, den1, den2, den_ans, fra_gcd;
     int remainder;
 
-	srand((unsigned int)time(NULL));
+    srand((unsigned int)time(NULL));
 
     num1 = rand() % 10 + 1;
     num2 = rand() % 10 + 1;
@@ -27,22 +26,20 @@ int main()
 
     printf("%d/%d + %d/%d = ", num1, den1, num2, den2);
 
-    if(num_ans%den_ans == 0){
-        printf("%d\n", num_ans/den_ans);
-    } else if(num_ans>den_ans){
-        printf("%d.%d/%d\n", num_ans/den_ans, num_ans%den_ans, den_ans);
+    if (num_ans % den_ans == 0) {
+        printf("%d\n", num_ans / den_ans);
+    } else if (num_ans > den_ans) {
+        printf("%d.%d/%d\n", num_ans / den_ans, num_ans % den_ans, den_ans);
     } else {
         printf("%d/%d\n", num_ans, den_ans);
     }
 }
 
-int gcd(int x, int y)
-{
+int gcd(int x, int y) {
     int r;
 
     // ユーグリッドの互除法
-    while((r = x % y) != 0)
-    {
+    while ((r = x % y) != 0) {
         x = y;
         y = r;
     }

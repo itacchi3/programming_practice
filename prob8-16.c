@@ -14,8 +14,9 @@ int main() {
     }
 
     max = array[0];  //最大値を配列の先頭要素で初期化
+
     //最大値のサーチ
-    for (i = 0; i < MAX_ARRAY; i++) {
+    for (i = 0; i < 10; i++) {
         if (max < array[i]) {  //配列i番目の数値がmaxよりも大きかったら
             max = array[i];  // maxに配列i番目の数値を格納
         }
